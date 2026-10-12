@@ -1,0 +1,103 @@
+.ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.ledger-column {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+}
+
+.ledger-column-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.ledger-column-head h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0;
+}
+
+.ledger-total {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.ledger-empty {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  margin: var(--space-sm) 0;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 0;
+  border-top: 0.5px solid var(--border);
+}
+
+.ledger-person {
+  flex: 1;
+  font-size: var(--text-base);
+}
+
+.ledger-amount {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.ledger-delete {
+  color: var(--text-faint);
+  cursor: pointer;
+  display: flex;
+}
+
+.ledger-delete:hover {
+  color: var(--text);
+}
+
+.ledger-form {
+  display: flex;
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+
+.ledger-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text);
+  outline: none;
+}
+
+.ledger-form input:focus {
+  border-color: var(--purple);
+}
+
+.ledger-form button {
+  width: 34px;
+  border-radius: 8px;
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}

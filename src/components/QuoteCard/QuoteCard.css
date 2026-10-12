@@ -1,0 +1,18 @@
+.quote-card {
+  background: var(--purple-soft);
+  border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.quote-card p {
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}

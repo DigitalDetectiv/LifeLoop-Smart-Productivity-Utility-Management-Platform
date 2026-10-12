@@ -1,0 +1,18 @@
+.live-clock {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.live-clock-time {
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.live-clock-date {
+  font-family: var(--font-voice);
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}

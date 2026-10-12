@@ -1,0 +1,80 @@
+.ambient-card {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.ambient-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.ambient-track-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ambient-track-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ambient-track-btn.active {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  border-color: transparent;
+}
+
+.ambient-missing-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--yellow-soft);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}
+
+.ambient-missing-note code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.ambient-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ambient-play-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ambient-play-btn:hover {
+  background: var(--purple-deep);
+}
+
+.ambient-controls input[type='range'] {
+  flex: 1;
+  accent-color: var(--purple);
+}

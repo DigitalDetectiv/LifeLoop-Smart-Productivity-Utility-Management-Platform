@@ -1,0 +1,95 @@
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.folder-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.folder-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.folder-icon {
+  font-size: 28px;
+}
+
+.folder-name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: var(--space-sm) 0 4px;
+}
+
+.folder-meta {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.ghost-btn {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.pinboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.pinboard-section {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+}
+
+.pinboard-section h3 {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  margin: 0 0 var(--space-md);
+}
+
+.pin-note {
+  background: var(--yellow-soft);
+  border-radius: 10px;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-base);
+  transform: rotate(-0.6deg);
+}
+
+.pin-note:nth-child(even) {
+  transform: rotate(0.6deg);
+}
+
+.pin-task {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 0;
+  border-top: 0.5px solid var(--border);
+  font-size: var(--text-base);
+}
+
+.pin-task .done {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}

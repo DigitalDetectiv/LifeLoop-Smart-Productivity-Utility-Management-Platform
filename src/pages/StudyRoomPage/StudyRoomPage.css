@@ -1,0 +1,8 @@
+.study-room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+}

@@ -1,0 +1,85 @@
+.settings-page {
+  flex: 1;
+  position: relative;
+  background: var(--main-grad);
+  overflow-y: auto;
+}
+
+.settings-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
+}
+
+.settings-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.settings-card h2 {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  margin: 0 0 var(--space-sm);
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  font-size: var(--text-base);
+}
+
+.settings-muted {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.settings-note {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 4px 0 0;
+}
+
+.toggle-btn {
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-btn-danger {
+  border-color: #E8B4AE;
+  color: #C0392B;
+}
+
+.toggle-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.settings-card-danger {
+  background: #FDF0EF;
+  border: 1px solid #F0C4BE;
+}
+
+.settings-danger-heading {
+  color: #C0392B !important;
+}
+
+.settings-danger-note {
+  font-size: 12px;
+  color: #A3473D;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}

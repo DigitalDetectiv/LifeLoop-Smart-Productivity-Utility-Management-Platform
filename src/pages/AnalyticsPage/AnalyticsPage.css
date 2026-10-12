@@ -1,0 +1,44 @@
+.analytics-page {
+  flex: 1;
+  position: relative;
+  background: var(--main-grad);
+  overflow-y: auto;
+}
+
+.analytics-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.analytics-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+  text-align: center;
+}
+
+.analytics-label {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.analytics-value {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--purple);
+}

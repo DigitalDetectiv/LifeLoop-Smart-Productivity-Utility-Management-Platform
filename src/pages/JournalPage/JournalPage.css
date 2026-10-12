@@ -1,0 +1,121 @@
+.journal-badges {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.journal-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--purple-chip);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.journal-badge-alt {
+  background: var(--sage-chip);
+}
+
+.journal-date-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.journal-date-label {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.journal-next .flip {
+  transform: rotate(180deg);
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.journal-box {
+  border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.journal-box.full {
+  grid-column: 1 / -1;
+}
+
+.journal-box-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.55);
+  align-self: flex-start;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.journal-box textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: vertical;
+  min-height: 64px;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.journal-box.full textarea {
+  min-height: 32px;
+}
+
+.vault-warning {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: var(--yellow-soft);
+  border-radius: 10px;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.vault-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.vault-label {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.vault-username {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.vault-password-area {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}

@@ -1,0 +1,167 @@
+/*
+  LifeLoop design tokens.
+  This file is the single source of truth for the visual language.
+  Change a value here and it propagates everywhere - no hardcoded
+  colors/fonts should appear in component CSS files.
+*/
+
+:root {
+  /* surfaces - mostly neutral now; lavender reserved for accents */
+  --bg: #F7F7F9;
+  --surface: #FFFFFF;
+  --surface-2: #F4F3F6;
+
+  /* neutral gray scale (the 90% of the UI) */
+  --gray-50: #FAFAFB;
+  --gray-100: #F1F0F3;
+  --gray-200: #E4E3E8;
+  --gray-300: #D3D1D9;
+  --gray-500: #8B899A;
+  --gray-700: #4B4959;
+
+  /* brand + category palette (pastel, user-overridable per category later) */
+  --purple: #7C6FCB;
+  --purple-deep: #5B4BB8;
+  --purple-soft: #D9D2F5;
+  --purple-dot: #B7A9EA;
+  --purple-chip: #A292E0;
+
+  --blue: #5B8DC9;
+  --blue-soft: #D6E6F7;
+  --blue-dot: #9FC3E8;
+  --blue-chip: #6FAEDE;
+
+  --sage: #5FA378;
+  --sage-soft: #DCEFE2;
+  --sage-dot: #A8D5BA;
+  --sage-chip: #6FBD8E;
+
+  --peach-soft: #FBE7D6;
+  --peach-dot: #F0C79E;
+  --peach-chip: #F0B87E;
+
+  --pink-soft: #FAE1E9;
+  --pink-dot: #EDB0C6;
+  --pink-chip: #E894B3;
+
+  --yellow-soft: #FBF1D3;
+  --yellow-dot: #EFD98B;
+  --yellow-chip: #E8C158;
+
+  /* text */
+  --text: #29262F;
+  --text-muted: var(--gray-500);
+  --text-faint: #A8A6B3;
+
+  /* borders + shape (neutral, not lavender - keeps purple special) */
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgba(55, 47, 82, 0.04);
+  --shadow-md: 0 4px 14px rgba(55, 47, 82, 0.08);
+
+  /* spacing scale (borrowed proportions from the original prototype so the
+     app reads as spacious/familiar rather than cramped) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* type scale */
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 17px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 32px;
+  --text-4xl: 40px;
+
+  /* main-section decorative background */
+  --main-grad:
+    radial-gradient(circle at 20% 20%, rgba(244,225,255,.65) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(211,232,255,.60) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(228,241,255,.55) 0%, transparent 50%),
+    linear-gradient(160deg,#EEE8FC 0%,#E4EEFC 55%,#ECF3FC 100%);
+
+  /* glass card-style mode (toggle in Settings > Appearance) */
+  --card-blur: 18px;
+
+  /* type */
+  --font-voice: 'Fraunces', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme='dark'] {
+  --bg: #1D1930;
+  --surface: #26213D;
+  --surface-2: #211D35;
+
+  --gray-50: #2A2540;
+  --gray-100: #322C4A;
+  --gray-200: #3B3455;
+  --gray-300: #473F63;
+  --gray-500: #9B93B8;
+  --gray-700: #D3CEE6;
+
+  --text: #EFEBFA;
+  --text-muted: var(--gray-500);
+  --text-faint: #7C7499;
+
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+
+  --purple-soft: #3A3260;
+  --blue-soft: #25344A;
+  --sage-soft: #20362B;
+  --peach-soft: #3D3025;
+  --pink-soft: #3A2733;
+  --yellow-soft: #3A3323;
+
+  --main-grad: linear-gradient(160deg, #1F1B32 0%, #1C1A2C 55%, #1E1E2A 100%);
+}
+
+/* Glass card-style mode: toggled from Settings > Appearance. Cards go
+   translucent + blurred instead of solid, so the pastel bubbles show
+   through. Applied as a data attribute on <html> so every existing
+   surface-based card picks it up without per-component changes. */
+[data-card-style='glass'] {
+  --surface: rgba(255, 255, 255, 0.55);
+  --surface-2: rgba(255, 255, 255, 0.35);
+  --border: rgba(255, 255, 255, 0.6);
+}
+
+[data-card-style='glass'][data-theme='dark'] {
+  --surface: rgba(38, 33, 61, 0.55);
+  --surface-2: rgba(38, 33, 61, 0.4);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+[data-card-style='glass'] .stat-card,
+[data-card-style='glass'] .compact-list,
+[data-card-style='glass'] .detail-panel,
+[data-card-style='glass'] .recurring-row,
+[data-card-style='glass'] .quote-card,
+[data-card-style='glass'] .quote-box,
+[data-card-style='glass'] .mini-today-list,
+[data-card-style='glass'] .rec-pill,
+[data-card-style='glass'] .folder-card,
+[data-card-style='glass'] .folder-list-view,
+[data-card-style='glass'] .up-next-list,
+[data-card-style='glass'] .panda-card,
+[data-card-style='glass'] .timeline-card,
+[data-card-style='glass'] .settings-card,
+[data-card-style='glass'] .journal-box,
+[data-card-style='glass'] .vault-row,
+[data-card-style='glass'] .ledger-column,
+[data-card-style='glass'] .gcal-grid,
+[data-card-style='glass'] .sidebar,
+[data-card-style='glass'] .secondary,
+[data-card-style='glass'] .chatbot-panel,
+[data-card-style='glass'] .login-card {
+  backdrop-filter: blur(var(--card-blur));
+  -webkit-backdrop-filter: blur(var(--card-blur));
+}

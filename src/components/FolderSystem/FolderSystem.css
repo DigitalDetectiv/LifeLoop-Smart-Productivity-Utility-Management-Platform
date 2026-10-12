@@ -1,0 +1,403 @@
+.folder-system {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.folder-back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px 6px 10px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.folder-back:hover {
+  color: var(--text);
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Root-level folders: a single horizontal scrolling row instead of a
+   wrapping grid, so the top of the page stays compact and you scroll
+   sideways if there are many folders - plus an inline "New" card. */
+.folder-strip {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+}
+
+.folder-strip .folder-card,
+.folder-strip-add {
+  flex: 0 0 160px;
+  scroll-snap-align: start;
+}
+
+.folder-strip-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: var(--radius-card);
+  border: 1.5px dashed var(--border-strong);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 108px;
+}
+
+.folder-strip-add:hover {
+  color: var(--purple-deep);
+  border-color: var(--purple);
+  background: var(--purple-soft);
+}
+
+.up-next {
+  margin-top: var(--space-sm);
+}
+
+.up-next-heading {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 var(--space-sm);
+}
+
+.up-next-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+.up-next-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 9px 0;
+  border-top: 0.5px solid var(--border);
+}
+
+.up-next-row:first-child {
+  border-top: none;
+}
+
+.up-next-title {
+  flex: 1;
+  font-size: var(--text-base);
+  font-weight: 500;
+}
+
+.up-next-source {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.folder-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.folder-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.folder-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent-soft, var(--purple-soft));
+  color: var(--accent-strong, var(--purple));
+}
+
+.folder-card-name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: var(--space-sm) 0 2px;
+}
+
+.folder-card-type {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.folder-add-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  align-self: flex-start;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.folder-add-btn:hover {
+  color: var(--text);
+  border-color: var(--purple);
+}
+
+.folder-create-form {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.folder-create-form input,
+.folder-create-form select {
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text);
+  outline: none;
+}
+
+.folder-create-form input:focus,
+.folder-create-form select:focus {
+  border-color: var(--purple);
+}
+
+.folder-create-form button {
+  padding: 9px 16px;
+  border-radius: 10px;
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.folder-create-cancel {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+}
+
+.folder-list-view {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subcat-empty {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+  padding: var(--space-sm) 0;
+}
+
+.subcat-task-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 0;
+  border-top: 0.5px solid var(--border);
+}
+
+.subcat-task-row:first-child {
+  border-top: none;
+}
+
+.subcat-task-title {
+  flex: 1;
+  font-size: var(--text-base);
+}
+
+.subcat-task-title.done {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+.subcat-delete {
+  color: var(--text-faint);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.subcat-delete:hover {
+  color: var(--text);
+}
+
+.recurring-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-faint);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.recurring-pill.on {
+  background: var(--sage-soft);
+  color: var(--sage);
+  border-color: transparent;
+}
+
+.subcat-add-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 0 4px;
+  color: var(--text-faint);
+}
+
+.subcat-add-item input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text);
+  outline: none;
+}
+
+.notepad-area {
+  min-height: 320px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text);
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+}
+
+.notepad-area:focus {
+  border-color: var(--purple);
+}
+
+.folder-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.folder-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.folder-delete-btn:hover {
+  color: #C0392B;
+  border-color: #C0392B;
+}
+
+.folder-add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 0.5px solid var(--border);
+}
+
+.folder-add-task-title {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  outline: none;
+}
+
+.folder-add-task-title:focus {
+  border-color: var(--purple);
+}
+
+.folder-add-task-submit {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* The single most-imminent unfinished item glows so it's obvious what
+   to do next. */
+.subcat-task-row.next-up {
+  background: var(--purple-soft);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 0 0 2px var(--purple-dot), 0 0 14px rgba(124, 111, 203, 0.35);
+}
+
+.next-up-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--purple);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}

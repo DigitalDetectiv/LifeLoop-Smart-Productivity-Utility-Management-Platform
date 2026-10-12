@@ -1,0 +1,51 @@
+.category-page {
+  flex: 1;
+  position: relative;
+  background: var(--main-grad);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-scroll {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
+}
+
+.category-body {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* The one very-visible "add a task" call to action. */
+.big-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--purple);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(124, 111, 203, 0.4);
+}
+
+.big-add-btn:hover {
+  background: var(--purple-deep);
+}
